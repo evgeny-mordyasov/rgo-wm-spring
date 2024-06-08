@@ -10,11 +10,31 @@
 
     <packaging>pom</packaging>
 
+    <modules>
+        <module>rgo-wm-spring-common</module>
+    </modules>
+
     <properties>
         <maven.compiler.target>17</maven.compiler.target>
         <maven.compiler.source>17</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- rgo-wm-dependencies -->
+        <rgo-wm-dependencies.version>24.0.0-SNAPSHOT</rgo-wm-dependencies.version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <!-- rgo-wm-dependencies -->
+            <dependency>
+                <groupId>ru.gold.ordance</groupId>
+                <artifactId>rgo-wm-dependencies</artifactId>
+                <version>${rgo-wm-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- /rgo-wm-dependencies -->
+        </dependencies>
+    </dependencyManagement>
 </project>
