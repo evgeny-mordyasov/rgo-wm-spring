@@ -12,6 +12,7 @@
 
     <modules>
         <module>rgo-wm-spring-common</module>
+        <module>rgo-wm-spring-jdbc</module>
     </modules>
 
     <properties>
