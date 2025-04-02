@@ -14,6 +14,7 @@
         <module>rgo-wm-spring-common</module>
         <module>rgo-wm-spring-jdbc</module>
         <module>rgo-wm-spring-web</module>
+        <module>rgo-wm-spring-bom</module>
     </modules>
 
     <properties>
@@ -22,21 +23,28 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <!-- rgo-wm-dependencies -->
-        <rgo-wm-dependencies.version>24.0.0-SNAPSHOT</rgo-wm-dependencies.version>
+        <rgo-wm-common-utils.version>24.0.0-SNAPSHOT</rgo-wm-common-utils.version>
+        <spring-boot.version>3.3.0</spring-boot.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- rgo-wm-dependencies -->
+            <!-- bom -->
             <dependency>
                 <groupId>ru.gold.ordance</groupId>
-                <artifactId>rgo-wm-dependencies</artifactId>
-                <version>${rgo-wm-dependencies.version}</version>
+                <artifactId>rgo-wm-common-utils-bom</artifactId>
+                <version>${rgo-wm-common-utils.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- /rgo-wm-dependencies -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- /bom -->
         </dependencies>
     </dependencyManagement>
 </project>
