@@ -53,6 +53,10 @@
             <artifactId>tomcat-embed-core</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.zalando</groupId>
+            <artifactId>logbook-api</artifactId>
+        </dependency>
         <!-- /utils -->
 
         <!-- test -->

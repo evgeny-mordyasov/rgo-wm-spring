@@ -25,6 +25,7 @@
 
         <rgo-wm-common-utils.version>24.0.0-SNAPSHOT</rgo-wm-common-utils.version>
         <spring-boot.version>3.4.3</spring-boot.version>
+        <logbook-bom.version>3.11.0</logbook-bom.version> <!-- compatible with spring-boot -->
     </properties>
 
     <dependencyManagement>
@@ -41,6 +42,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.zalando</groupId>
+                <artifactId>logbook-bom</artifactId>
+                <version>${logbook-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
